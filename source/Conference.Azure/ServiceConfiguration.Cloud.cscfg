@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration osFamily="4" serviceName="Conference.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Conference.Web.Admin">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <!--<Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=stticketsdemo;AccountKey=+n/ARsf1V6BnDwNSYeip47JHM43LtHXypZnZjty8n/Ji9icw4NbKnIBcF08PJYDegbZJG66+m9/nvH+nCZk31Q==" />-->
+      <Setting name="Diagnostics.ScheduledTransferPeriod" value="00:02:00" />
+      <Setting name="Diagnostics.LogLevelFilter" value="Warning" />
+      <Setting name="Diagnostics.PerformanceCounterSampleRate" value="00:00:30" />
+      <Setting name="DbContext.ConferenceManagement" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="DbContext.SqlBus" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="MaintenanceMode" value="false" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="wayne" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBnDCdYOEKSyR82AX41T6D0wDQYJKoZIhvcNAQEBBQAEggEAaU7MdrM2VVAY15UgToXDqoY5Cmfut8UK0BUdlKGSPLhZL5VQoPZ8Spm332sxDT/34dnwut/bduvRpfD/hpuMkGhXAakEuORtKbOmZr6HUxBaEseBJ/qjTZYt6P3XzlrQ8tPhmrS6xdiB4mEQX0jJV8YkR+QPikrxzRv/hKrQaK4zXW2PbPnuwbZ7zIzUL8Tue1aFVIbNEvpMMFRYd2iysqd6U71b4ewSpo3DMGNWQRC1T6GBWZzXv0NA0YTcZtAN4feN5qMH5UQ1ZfWDFPfvzYE0fKnGZ9glkResvyk5MRsvha90C9+TXqclSD0U3E8f4/pCJlKJn+ca7HK8Upb74jAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECAD9Ppz2sR9xgBC151p6g8ka/kVDsmLueJJd" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-08-30T23:59:59.0000000+01:00" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="6D714B94D5AAEB6910560EAF8A397BE9C39286AA" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="Conference.Web.Public">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <!--<Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=stticketsdemo;AccountKey=+n/ARsf1V6BnDwNSYeip47JHM43LtHXypZnZjty8n/Ji9icw4NbKnIBcF08PJYDegbZJG66+m9/nvH+nCZk31Q==" />-->
+      <Setting name="Diagnostics.ScheduledTransferPeriod" value="00:02:00" />
+      <Setting name="Diagnostics.LogLevelFilter" value="Warning" />
+      <Setting name="Diagnostics.PerformanceCounterSampleRate" value="00:00:30" />
+      <Setting name="DbContext.Payments" value="" />
+      <Setting name="DbContext.ConferenceRegistration" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="DbContext.SqlBus" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="DbContext.BlobStorage" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="MaintenanceMode" value="false" />
+      <Setting name="InstrumentationEnabled" value="false" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="wayne" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBnDCdYOEKSyR82AX41T6D0wDQYJKoZIhvcNAQEBBQAEggEAaU7MdrM2VVAY15UgToXDqoY5Cmfut8UK0BUdlKGSPLhZL5VQoPZ8Spm332sxDT/34dnwut/bduvRpfD/hpuMkGhXAakEuORtKbOmZr6HUxBaEseBJ/qjTZYt6P3XzlrQ8tPhmrS6xdiB4mEQX0jJV8YkR+QPikrxzRv/hKrQaK4zXW2PbPnuwbZ7zIzUL8Tue1aFVIbNEvpMMFRYd2iysqd6U71b4ewSpo3DMGNWQRC1T6GBWZzXv0NA0YTcZtAN4feN5qMH5UQ1ZfWDFPfvzYE0fKnGZ9glkResvyk5MRsvha90C9+TXqclSD0U3E8f4/pCJlKJn+ca7HK8Upb74jAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECAD9Ppz2sR9xgBC151p6g8ka/kVDsmLueJJd" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-08-30T23:59:59.0000000+01:00" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="6D714B94D5AAEB6910560EAF8A397BE9C39286AA" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="WorkerRoleCommandProcessor">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <!--<Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=stticketsdemo;AccountKey=+n/ARsf1V6BnDwNSYeip47JHM43LtHXypZnZjty8n/Ji9icw4NbKnIBcF08PJYDegbZJG66+m9/nvH+nCZk31Q==" />-->
+      <Setting name="Diagnostics.ScheduledTransferPeriod" value="00:02:00" />
+      <Setting name="Diagnostics.LogLevelFilter" value="Information" />
+      <Setting name="Diagnostics.PerformanceCounterSampleRate" value="00:00:30" />
+      <Setting name="DbContext.Payments" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="DbContext.EventStore" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="DbContext.ConferenceRegistrationProcesses" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="DbContext.ConferenceRegistration" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="DbContext.SqlBus" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="DbContext.BlobStorage" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="DbContext.ConferenceManagement" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="MaintenanceMode" value="false" />
+      <Setting name="DbContext.MessageLog" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="InstrumentationEnabled" value="false" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="wayne" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBnDCdYOEKSyR82AX41T6D0wDQYJKoZIhvcNAQEBBQAEggEAaU7MdrM2VVAY15UgToXDqoY5Cmfut8UK0BUdlKGSPLhZL5VQoPZ8Spm332sxDT/34dnwut/bduvRpfD/hpuMkGhXAakEuORtKbOmZr6HUxBaEseBJ/qjTZYt6P3XzlrQ8tPhmrS6xdiB4mEQX0jJV8YkR+QPikrxzRv/hKrQaK4zXW2PbPnuwbZ7zIzUL8Tue1aFVIbNEvpMMFRYd2iysqd6U71b4ewSpo3DMGNWQRC1T6GBWZzXv0NA0YTcZtAN4feN5qMH5UQ1ZfWDFPfvzYE0fKnGZ9glkResvyk5MRsvha90C9+TXqclSD0U3E8f4/pCJlKJn+ca7HK8Upb74jAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECAD9Ppz2sR9xgBC151p6g8ka/kVDsmLueJJd" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-08-30T23:59:59.0000000+01:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="6D714B94D5AAEB6910560EAF8A397BE9C39286AA" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="Conference.Api.Public">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=portalvhds3cmczg323mv66;AccountKey=McVpSJfEAeez0MP1EHgjXZ5nj5wb7jcI2OdBfxJEiclDJ5VYneOLaLcEYU8K1+gWNpxtNIpOcJzrlRGBSRTc5w==" />
+      <Setting name="Diagnostics.ScheduledTransferPeriod" value="00:02:00" />
+      <Setting name="Diagnostics.LogLevelFilter" value="" />
+      <Setting name="Diagnostics.PerformanceCounterSampleRate" value="00:00:30" />
+      <Setting name="DbContext.ConferenceManagement" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="DbContext.SqlBus" value="Server=tcp:i1ncjc84ts.database.windows.net;Database=conference;User ID=aditi@i1ncjc84ts.database.windows.net;Password=William2020;Trusted_Connection=False;Encrypt=True; MultipleActiveResultSets=True;" />
+      <Setting name="MaintenanceMode" value="false" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Conference.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Conference.Web.Admin">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Diagnostics.ScheduledTransferPeriod" value="00:02:00" />
+      <Setting name="Diagnostics.LogLevelFilter" value="Verbose" />
+      <Setting name="Diagnostics.PerformanceCounterSampleRate" value="00:00:30" />
+      <Setting name="DbContext.ConferenceManagement" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="DbContext.SqlBus" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="MaintenanceMode" value="false" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="wayne" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCECtzAuY217CLRJR7Ae8R5HwwDQYJKoZIhvcNAQEBBQAEggEAgqzRkVZS8YB55tcYZq87oiDRV1W/XrK4VP5G1ilYpAWUPuVktKFaiNn0zOGBgl5mLbb8wdIjVXnaiKZkYlYVnszcxP+/zK/L8fVtQuu7jiX57IeWxGmTAjtWP8cntRHt4fycGs8InnzV7dLzmgR4qa5gTk2qLzAdlQJx+/1EIvFHv136mjdP6faNFjkdKOiUjF1ENDsHNW2kK/lG+cNiLjsVQn5oXE1GZhH1vBUyfSZFoUuigDO92Rk3iVWakDxjG2yvB7RLJbDQ7cxj9rJwcxZ+HeMKkLx5AORP0aJhqq4MuGD+G05iJx0oXzKFbmPdokO6TqsawhYog+sUjEQcJjAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECDhsO13Lj/C3gBC37GTBUWnfBvbXjZhn+QMI" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-11-29T23:59:59.0000000+00:00" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="5E6B171B21FFC6EAB841F1F1B81A45B291E2B28E" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="Conference.Web.Public">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Diagnostics.ScheduledTransferPeriod" value="00:02:00" />
+      <Setting name="Diagnostics.LogLevelFilter" value="Verbose" />
+      <Setting name="Diagnostics.PerformanceCounterSampleRate" value="00:00:30" />
+      <Setting name="DbContext.Payments" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="DbContext.ConferenceRegistration" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="DbContext.SqlBus" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="DbContext.BlobStorage" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="MaintenanceMode" value="false" />
+      <Setting name="InstrumentationEnabled" value="false" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="wayne" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCECtzAuY217CLRJR7Ae8R5HwwDQYJKoZIhvcNAQEBBQAEggEAgqzRkVZS8YB55tcYZq87oiDRV1W/XrK4VP5G1ilYpAWUPuVktKFaiNn0zOGBgl5mLbb8wdIjVXnaiKZkYlYVnszcxP+/zK/L8fVtQuu7jiX57IeWxGmTAjtWP8cntRHt4fycGs8InnzV7dLzmgR4qa5gTk2qLzAdlQJx+/1EIvFHv136mjdP6faNFjkdKOiUjF1ENDsHNW2kK/lG+cNiLjsVQn5oXE1GZhH1vBUyfSZFoUuigDO92Rk3iVWakDxjG2yvB7RLJbDQ7cxj9rJwcxZ+HeMKkLx5AORP0aJhqq4MuGD+G05iJx0oXzKFbmPdokO6TqsawhYog+sUjEQcJjAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECDhsO13Lj/C3gBC37GTBUWnfBvbXjZhn+QMI" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-11-29T23:59:59.0000000+00:00" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="5E6B171B21FFC6EAB841F1F1B81A45B291E2B28E" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="WorkerRoleCommandProcessor">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Diagnostics.ScheduledTransferPeriod" value="00:02:00" />
+      <Setting name="Diagnostics.LogLevelFilter" value="Verbose" />
+      <Setting name="Diagnostics.PerformanceCounterSampleRate" value="00:00:30" />
+      <Setting name="DbContext.Payments" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="DbContext.EventStore" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="DbContext.BlobStorage" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="DbContext.ConferenceRegistrationProcesses" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="DbContext.ConferenceRegistration" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="DbContext.SqlBus" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="DbContext.ConferenceManagement" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="MaintenanceMode" value="false" />
+      <Setting name="DbContext.MessageLog" value="Data Source=.\sqlexpress;Initial Catalog=conference;Integrated Security=True" />
+      <Setting name="InstrumentationEnabled" value="false" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="wayne" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCECtzAuY217CLRJR7Ae8R5HwwDQYJKoZIhvcNAQEBBQAEggEAgqzRkVZS8YB55tcYZq87oiDRV1W/XrK4VP5G1ilYpAWUPuVktKFaiNn0zOGBgl5mLbb8wdIjVXnaiKZkYlYVnszcxP+/zK/L8fVtQuu7jiX57IeWxGmTAjtWP8cntRHt4fycGs8InnzV7dLzmgR4qa5gTk2qLzAdlQJx+/1EIvFHv136mjdP6faNFjkdKOiUjF1ENDsHNW2kK/lG+cNiLjsVQn5oXE1GZhH1vBUyfSZFoUuigDO92Rk3iVWakDxjG2yvB7RLJbDQ7cxj9rJwcxZ+HeMKkLx5AORP0aJhqq4MuGD+G05iJx0oXzKFbmPdokO6TqsawhYog+sUjEQcJjAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECDhsO13Lj/C3gBC37GTBUWnfBvbXjZhn+QMI" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-11-29T23:59:59.0000000+00:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="5E6B171B21FFC6EAB841F1F1B81A45B291E2B28E" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="Conference.Api.Public">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=portalvhds3cmczg323mv66;AccountKey=McVpSJfEAeez0MP1EHgjXZ5nj5wb7jcI2OdBfxJEiclDJ5VYneOLaLcEYU8K1+gWNpxtNIpOcJzrlRGBSRTc5w==" />
+      <Setting name="Diagnostics.ScheduledTransferPeriod" value="00:02:00" />
+      <Setting name="Diagnostics.LogLevelFilter" value="" />
+      <Setting name="Diagnostics.PerformanceCounterSampleRate" value="00:00:30" />
+      <Setting name="DbContext.ConferenceManagement" value="" />
+      <Setting name="DbContext.SqlBus" value="" />
+      <Setting name="MaintenanceMode" value="false" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
